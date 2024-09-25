@@ -4,6 +4,7 @@ from flask_login import LoginManager, UserMixin, login_user, login_required, log
 import logging
 import time
 import os
+import json
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
@@ -64,10 +65,13 @@ def alert():
     if request.method == 'POST':
         # add a file in /alert named based gurrent time and contain request json 
         with open(f'./alert/{time.time()}.json', 'w') as f:
-            print(request.json,request.is_json)
+            print(request.json)
+            print(type(request.json))
+            # write a dict to string using json
             try:
-                f.write(request.json)
-            except:
+                f.write(json.dumps(request.json))
+            except Exception as e:
+                print(e)
                 return 'Failed to add alert'
         return 'Alert added successfully'
     if request.method == 'GET':
