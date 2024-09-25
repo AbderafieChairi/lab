@@ -2,7 +2,8 @@ from flask import Flask, render_template, redirect, url_for, request, flash
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 import logging
-
+import time
+import os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your_secret_key'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
@@ -57,6 +58,22 @@ def page_not_found(e):
     logging.error(f'404 Error: {request.path} not found')
     return render_template('404.html'), 404
 
+
+@app.route('/alerts', methods=['GET', 'POST'])
+def alert():
+    if request.method == 'POST':
+        # add a file in /alert named based gurrent time and contain request json 
+        with open(f'/alert/{time.time()}.json', 'w') as f:
+            f.write(request.data)
+        return 'Alert added successfully'
+    if request.method == 'GET':
+        # get all files in /alert
+        files = os.listdir('/alert')
+        alerts = []
+        for file in files:
+            with open(f'/alert/{file}', 'r') as f:
+                alerts.append(f.read())
+        return '['+'\n'.join(alerts)+']'
 
 @app.route('/profile')
 @login_required
