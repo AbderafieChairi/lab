@@ -64,9 +64,9 @@ def alert():
     if request.method == 'POST':
         # add a file in /alert named based gurrent time and contain request json 
         with open(f'./alert/{time.time()}.json', 'w') as f:
-            print(request.json(),request.is_json, file=f)
+            print(request.json,request.is_json)
             try:
-                f.write(request.json())
+                f.write(request.json)
             except:
                 return 'Failed to add alert'
         return 'Alert added successfully'
