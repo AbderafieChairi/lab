@@ -1,0 +1,58 @@
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 650-624-269
+INFO:werkzeug: * Detected change in 'C:\\Users\\abderafie\\Desktop\\me\\lab\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 650-624-269
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:09:28] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:09:28] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:09:32] "GET /login HTTP/1.1" 200 -
+WARNING:root:Failed login attempt for abderafiechairi02@gmail.com.
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:09:35] "POST /login HTTP/1.1" 200 -
+WARNING:root:Failed login attempt for abderafiechairi02@gmail.com.
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:09:37] "POST /login HTTP/1.1" 200 -
+WARNING:root:Failed login attempt for abderafiechairi02@gmail.com.
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:09:37] "POST /login HTTP/1.1" 200 -
+WARNING:root:Failed login attempt for abderafiechairi02@gmail.com.
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:09:39] "POST /login HTTP/1.1" 200 -
+WARNING:root:Failed login attempt for abderafiechairi02@gmail.com.
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:10:48] "POST /login HTTP/1.1" 200 -
+WARNING:root:Failed login attempt for abderafiechairi02@gmail.com.
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:10:55] "POST /login HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\abderafie\\Desktop\\me\\lab\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 650-624-269
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:13:14] "[32mGET /profile HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:13:15] "GET /login?next=/profile HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'C:\\Users\\abderafie\\Desktop\\me\\lab\\setup.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 650-624-269
+INFO:werkzeug: * Detected change in 'C:\\Users\\abderafie\\Desktop\\me\\lab\\setup.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 650-624-269
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 650-624-269
+INFO:root:User admin logged in.
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:15:13] "[32mPOST /login?next=/profile HTTP/1.1[0m" 302 -
+INFO:root:Profile page accessed by admin.
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:15:13] "GET /profile HTTP/1.1" 200 -
+INFO:root:User admin logged out.
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:15:20] "[32mGET /logout HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:15:20] "GET /login HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:15:24] "[32mGET /profile HTTP/1.1[0m" 302 -
+INFO:werkzeug:127.0.0.1 - - [25/Sep/2024 10:15:24] "GET /login?next=/profile HTTP/1.1" 200 -
