@@ -63,15 +63,15 @@ def page_not_found(e):
 def alert():
     if request.method == 'POST':
         # add a file in /alert named based gurrent time and contain request json 
-        with open(f'/alert/{time.time()}.json', 'w') as f:
+        with open(f'./alert/{time.time()}.json', 'w') as f:
             f.write(request.data)
         return 'Alert added successfully'
     if request.method == 'GET':
         # get all files in /alert
-        files = os.listdir('/alert')
+        files = os.listdir('./alert')
         alerts = []
         for file in files:
-            with open(f'/alert/{file}', 'r') as f:
+            with open(f'./alert/{file}', 'r') as f:
                 alerts.append(f.read())
         return '['+'\n'.join(alerts)+']'
 
