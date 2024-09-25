@@ -12,7 +12,7 @@ login_manager = LoginManager(app)
 login_manager.login_view = 'login'
 
 # Set up logging
-logging.basicConfig(filename='app.log', level=logging.INFO)
+logging.basicConfig(filename='app.log', level=logging.WARNING)
 
 # User model
 class User(UserMixin, db.Model):
@@ -22,7 +22,7 @@ class User(UserMixin, db.Model):
 
 @login_manager.user_loader
 def load_user(user_id):
-    return User.query.get(int(user_id))
+    return db.session.get(User,{"id": user_id})
 
 @app.route('/')
 def home():
@@ -54,7 +54,7 @@ def logout():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    app.logger.error(f'404 Error: {request.path} not found')
+    logging.error(f'404 Error: {request.path} not found')
     return render_template('404.html'), 404
 
 
